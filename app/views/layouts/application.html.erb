@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>GarmentOnRails</title>
+    <title>Шашлыки</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,6 +11,43 @@
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <%= link_to "BBQ!", root_path, class: "nav-link" %>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <%= link_to "Link1", "/path1", class: "nav-link" %>
+            <%= link_to "Link2", "/path2", class: "nav-link" %>
+            <%= link_to "Link3", "/path3", class: "nav-link" %>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9">
+          <%# <%= bootstrap_flash %> %>
+          <%= yield %>
+        </div>
+        <div class="col-lg-3">
+          <nav class="nav flex-column">
+            <div class="container-fluid">
+            <h3>Sidebar</h3>
+                <div class="navbar-nav">
+                  <%= link_to "Link1", "/path1", class: "nav-link" %>
+                  <%= link_to "Link2", "/path2", class: "nav-link" %>
+                  <%= link_to "Link3", "/path3", class: "nav-link" %>
+                </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+
+      <footer>
+        <p>&copy; Company 2016</p>
+      </footer>
+
+    </div>
   </body>
 </html>
