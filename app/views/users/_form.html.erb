@@ -1,4 +1,4 @@
-<%= form_with(model: user, html: {multipart: true}) do |form| %>
+<%= form_with(model: user, html: {multipart: true}) do |f| %>
   <% if user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
@@ -11,7 +11,18 @@
     </div>
   <% end %>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="mt-2">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+
+  <div class="mt-2">
+    <%= f.label :email %>
+    <%= f.text_field :email, class: 'form-control' %>
+  </div>
+
+  <div class="actions mt-4">
+    <%= f.submit 'Сохранить', class: 'btn btn-primary' %>
+    или <%= link_to 'вернуться', :back %>
   </div>
 <% end %>
