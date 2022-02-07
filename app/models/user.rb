@@ -9,8 +9,7 @@ class User < ApplicationRecord
   validates :name, presence: true, length: { maximum: 35 }
 
   private
-
   def set_name
-    self.name = "User#{rand(777)}" if self.name.blank?
+    self.name = "User#{rand(999)}" if self.name.blank?
   end
 end

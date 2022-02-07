@@ -1,0 +1,8 @@
+ru:
+  activerecord:
+    attributes:
+      user:
+        name: Имя пользователя
+        email: Электронная почта
+        password: Пароль (не менее 6 символов)
+        password_confirmation: Подтверждение пароля
