@@ -12,19 +12,19 @@
   <% end %>
 
   <div class="mt-2">
-    <%= f.label :title %>
+    <%= f.label :title, "Название" %>
     <%= f.text_field :title, class: 'form-control' %>
   </div>
   <div class="mt-2">
-    <%= f.label :address %>
+    <%= f.label :address, "Адрес" %>
     <%= f.text_field :address, class: 'form-control' %>
   </div>
   <div class="mt-2">
-    <%= f.label :datetime %>
+    <%= f.label :datetime, "Дата и время" %>
     <p><%= f.datetime_select :datetime, class: 'form-control' %></p>
   </div>
   <div class="mt-2">
-    <%= f.label :description %>
+    <%= f.label :description, "Описание" %>
     <%= f.text_area :description, class: 'form-control' %>
   </div>
   <div class="mt-2">
