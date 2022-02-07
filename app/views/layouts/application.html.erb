@@ -14,10 +14,7 @@
     <%= render '/partials/navigation' %>
 
     <div class="container">
-      <p id="notice"><%= notice %></p>
-    </div>
-
-    <div class="container">
+      <%= sanitize flash_message%>
       <%= yield %>
     </div>
 
