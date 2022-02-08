@@ -2,9 +2,9 @@
   <% flash.map do |name, message| %>
     <% case name %>
     <% when 'alert' %>
-      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      <div class="col-md-6 mt-4 alert alert-danger alert-dismissible fade show" role="alert">
     <% when 'notice' %>
-      <div class="alert alert-success alert-dismissible fade show" role="notice">
+      <div class="col-md-6 mt-4 alert alert-success alert-dismissible fade show" role="notice">
     <% end %>
     <%= message %>
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
