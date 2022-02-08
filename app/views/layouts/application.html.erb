@@ -14,7 +14,7 @@
     <%= render '/partials/navigation' %>
 
     <div class="container">
-      <%= sanitize flash_message%>
+      <%= render "devise/shared/flash_messages" %>
       <%= yield %>
     </div>
 
