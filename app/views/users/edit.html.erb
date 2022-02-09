@@ -1,11 +1,11 @@
-<h1>Редактирование профиля</h1>
+<h1><%= t('.header') %></h1>
 
 <div class="row">
   <div class="col-md-6 mt-4">
     <%= render 'form', user: @user %>
 
     <div class="mt-4">
-      <%= link_to 'Сменить пароль', edit_user_registration_path %>
+      <%= link_to t('.change_password'), edit_user_registration_path, class: 'btn btn-outline-danger' %>
     </div>
   </div>
 </div>

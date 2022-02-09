@@ -1,8 +1,85 @@
 ru:
+  app:
+    name: 'Шашлыки'
+    company: 'Валентин'
+    profile: 'Профиль'
+    log_out: 'Выйти'
+    log_in: 'Войти'
+    register: 'Зарегистрироваться'
+
+  controllers:
+    users:
+      updated: 'Вы обновили свой профиль'
+    events:
+      created: 'Вы создали новое событие'
+      updated: 'Вы изменили событие'
+      deleted: 'Вы удалили событие'
+
   activerecord:
+    models:
+      user: 'Пользователь'
+      event: 'Событие'
     attributes:
       user:
-        name: Имя пользователя
-        email: Электронная почта
-        password: Пароль (не менее 6 символов)
-        password_confirmation: Подтверждение пароля
+        name: 'Имя пользователя'
+        email: 'Email'
+        password: 'Пароль'
+        password_confirmation: 'Подтверждение пароля'
+      event:
+        title: 'Название'
+        address: 'Место события'
+        datetime: 'Дата и время'
+        description: 'Описание'
+
+  users:
+    show:
+      edit: 'Редактировать профиль'
+      arranged: 'Организовано:'
+      arranged_nothing: 'Пока нет мероприятий'
+    edit:
+      header: 'Редактирование профиля'
+      change_password: 'Сменить пароль'
+    form:
+      submit: 'Сохранить'
+      back: 'Назад'
+
+  events:
+    show:
+      edit: 'Изменить событие'
+    new:
+      header: 'Новое событие'
+    index:
+      events: 'Все события'
+      create: 'Создать событие'
+    edit:
+      header: 'Изменение события'
+    form:
+      submit: 'Сохранить'
+      back: 'Назад'
+
+  devise:
+    sessions:
+      new:
+        header: 'Войти на сайт'
+        submit: 'Войти'
+    passwords:
+      new:
+        header: 'Забыли пароль?'
+        submit: 'Выслать инструкции по восстановлению пароля'
+    registrations:
+      new:
+        header: 'Регистрация нового пользователя'
+        submit: 'Зарегистрироваться'
+      edit:
+        header: 'Изменение регистрационных данных'
+        submit: 'Обновить'
+        profile_deletion: 'Удаление профиля'
+        smth_wrong?: 'Что-то пошло не так?'
+        delete_profile: 'Удалить профиль'
+        cancel: 'Отменить'
+        sure?: 'Вы уверены?'
+
+  error:
+    one: "%{count} ошибка"
+    some: "%{count} ошибки"
+    many: "%{count} ошибок"

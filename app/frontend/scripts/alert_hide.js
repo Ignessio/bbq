@@ -1,6 +1,6 @@
 function hideNotice() {
   setInterval(function() {
-    document.querySelector('.alert').style.display = "none";
+    document.getElementById('alert').style.display = "none";
   }, 5000);
 }
 

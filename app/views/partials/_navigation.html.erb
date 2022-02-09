@@ -1,17 +1,17 @@
 <nav class="mb-2 navbar navbar-expand-lg navbar-light bg-light border-bottom">
   <div class="container">
-    <%= link_to "BBQ!", root_path, class: "navbar-brand" %>
+    <%= link_to t('app.name'), root_path, class: "navbar-brand" %>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <% if user_signed_in? %>
-          <li class="mx-4"><%= link_to 'Профиль', current_user %></li>
-          <li class="mx-4"><%= link_to 'Выйти', destroy_user_session_path, method: :delete %></li>
+          <li class="mx-4"><%= link_to t('app.profile'), current_user %></li>
+          <li class="mx-4"><%= link_to t('app.log_out'), destroy_user_session_path, method: :delete %></li>
         <% else %>
-          <li class="mx-4"><%= link_to 'Войти', new_user_session_path %></li>
-          <li class="mx-4"><%= link_to 'Зарегистрироваться', new_user_registration_path %></li>
+          <li class="mx-4"><%= link_to t('app.log_in'), new_user_session_path %></li>
+          <li class="mx-4"><%= link_to t('app.register'), new_user_registration_path %></li>
         <% end %>
       </ul>
     </div>
