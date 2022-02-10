@@ -70,16 +70,33 @@ ru:
       new:
         header: 'Регистрация нового пользователя'
         submit: 'Зарегистрироваться'
+        min_length: 'знаков минимум'
       edit:
         header: 'Изменение регистрационных данных'
+        waiting_confirmation: 'Ожидатеся подтверждение:'
+        no_change: 'оставьте пустым, если не хотите менять'
+        min_length: 'знаков минимум'
+        confirm_change: 'подтвердить изменения'
         submit: 'Обновить'
         profile_deletion: 'Удаление профиля'
         smth_wrong?: 'Что-то пошло не так?'
         delete_profile: 'Удалить профиль'
         cancel: 'Отменить'
         sure?: 'Вы уверены?'
-
   error:
-    one: "%{count} ошибка"
-    some: "%{count} ошибки"
-    many: "%{count} ошибок"
+    one: 'В вашей форме %{count} ошибка:'
+    few: 'В вашей форме %{count} ошибки:'
+    many: 'В вашей форме %{count} ошибок:'
+
+  shared:
+    links:
+      sign_in: 'Войти'
+      registration: 'Регистрация'
+      forgot_password?: 'Забыли пароль?'
+      not_received_confirmation: 'Не получили инструкций для подтверждения?'
+      not_received_unlock: 'Не получили инструкций для разблокировки?'
+      sign_in_with: 'Войти с'
+
+  layouts:
+    application:
+      title: 'Шашлыки'

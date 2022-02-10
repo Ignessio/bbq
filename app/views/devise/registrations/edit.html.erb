@@ -11,14 +11,14 @@
       </div>
 
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-        <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+        <div><%= t('.waiting_confirmation') %> <%= resource.unconfirmed_email %></div>
       <% end %>
 
       <div class="mb-3">
-        <%= f.label :password, class: "form-label" %> <i>(оставьте пустым, если не хотите менять)</i>
+        <%= f.label :password, class: "form-label" %> <i>(<%= t('.no_change') %>)</i>
         <%= f.password_field :password, class: "form-control" %>
         <% if @minimum_password_length %>
-          <em>минимум <%= @minimum_password_length %> знаков</em>
+          <em> (<%= @minimum_password_length %> <%= t('.min_length') %> ) </em>
         <% end %>
       </div>
 
@@ -28,7 +28,7 @@
       </div>
 
       <div class="mb-3">
-        <%= f.label :current_password %> <i>(подтвердить изменения)</i><br />
+        <%= f.label :current_password %> <i>(<%= t('.confirm_change') %>)</i><br />
         <%= f.password_field :current_password, class: "form-control" %>
       </div>
 
