@@ -13,7 +13,11 @@ module ApplicationHelper
       when 'notice'
         alert_type = 'alert-success'
       end
-      tag.div(message, class: "col-md-6 mt-4 alert #{alert_type} alert-dismissible fade show", role: name)
+      <<~FLASH
+      <div id="alert" class="col-md-6 mt-4 alert #{alert_type} alert-dismissible fade show" role=#{name}>
+      #{message}#{button_close}
+      </div>
+      FLASH
     end.join
   end
 end
