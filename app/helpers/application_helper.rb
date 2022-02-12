@@ -3,21 +3,23 @@ module ApplicationHelper
     asset_pack_path('media/images/user.png')
   end
 
-  def flash_message(name, message)
-    button_close = tag.button(type: "button", class: "btn-close", data: { bs_dismiss: "alert" }, aria: { label: "Close" })
-    alert_type = nil
-    flash.map do |name, message|
-      case name
-      when 'alert'
-        alert_type = 'alert-danger'
-      when 'notice'
-        alert_type = 'alert-success'
+  def flash_message
+    tag.div(id: 'alert') do
+      flash.each do |name, message|
+        alert_type =
+          case name
+          when 'alert'
+            'alert-danger'
+          when 'notice'
+            'alert-success'
+          end
+
+        concat(tag.div(class: "col-md-6 mt-4 alert #{alert_type} alert-dismissible fade show", role: name) do
+          concat(message)
+          concat(tag.button(type: 'button', class: 'btn-close', data: { bs_dismiss: 'alert' }, aria: { label: 'Close' }))
+        end
+        )
       end
-      <<~FLASH
-      <div id="alert" class="col-md-6 mt-4 alert #{alert_type} alert-dismissible fade show" role=#{name}>
-      #{message}#{button_close}
-      </div>
-      FLASH
-    end.join
+    end
   end
 end
