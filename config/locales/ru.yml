@@ -7,14 +7,6 @@ ru:
     log_in: 'Войти'
     register: 'Зарегистрироваться'
 
-  controllers:
-    users:
-      updated: 'Вы обновили свой профиль'
-    events:
-      created: 'Вы создали новое событие'
-      updated: 'Вы изменили событие'
-      deleted: 'Вы удалили событие'
-
   activerecord:
     models:
       user: 'Пользователь'
@@ -39,11 +31,15 @@ ru:
     edit:
       header: 'Редактирование профиля'
       change_password: 'Сменить пароль'
+    update:
+      updated: 'Вы обновили свой профиль'
     form:
       submit: 'Сохранить'
       back: 'Назад'
 
   events:
+    create:
+      created: 'Вы создали новое событие'
     show:
       edit: 'Изменить событие'
       delete: 'Удалить событие'
@@ -55,6 +51,10 @@ ru:
       create: 'Создать событие'
     edit:
       header: 'Изменение события'
+    update:
+      updated: 'Вы изменили событие'
+    destroy:
+      deleted: 'Вы удалили событие'
     form:
       submit: 'Сохранить'
       back: 'Назад'
