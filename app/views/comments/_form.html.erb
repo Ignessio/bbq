@@ -1,5 +1,17 @@
-<%= form_with(model: comment) do |form| %>
-  <%= render "shared/error_messages", resource: event %>
+<%= form_with(model: comment) do |f| %>
+  <%= render "shared/error_messages", resource: comment %>
+
+  <div class="mt-2">
+    <%= f.label :body %>
+    <%= f.text_area :body, class: 'form-control' %>
+  </div>
+
+  <% unless user_signed_in? %>
+    <div class="mt-2">
+      <%= f.label :user_name %>
+      <%= f.text_field :user_name, class: 'form-control' %>
+    </div>
+  <% end %>
 
   <div class="mt-2">
     <%= f.submit t('.submit'), class: 'btn btn-outline-primary' %>

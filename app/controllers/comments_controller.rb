@@ -14,12 +14,12 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    message = {notice: t('.deleted')}
+    message = { notice: t('.deleted') }
 
     if current_user_cat_edit?(@comment)
       @comment.destroy!
     else
-      message = {alert: t('.error')}
+      message = { alert: t('.error') }
     end
 
     redirect_to @event, message

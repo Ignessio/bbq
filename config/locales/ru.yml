@@ -69,7 +69,9 @@ ru:
       deleted: 'Ваш комментарий удалён'
     error: 'Какая-то ошибка в комментарии'
     form:
-      submit: 'Сохранить'
+      body: 'Комментарий'
+      user_name: 'Имя пользователя'
+      submit: 'Сохранить комментарий'
     comment:
       destroy_confirm: 'Точно удалить ваш комментарий?'
 
@@ -80,7 +82,9 @@ ru:
       deleted: 'Вы отписались'
     error: 'Ошибка подписки'
     form:
-      submit: 'Сохранить'
+      user_name: 'Имя пользователя'
+      user_email: 'Email'
+      submit: 'Подписаться'
     subscription:
       destroy_confirm: 'Удалить вашу подписку?'
 

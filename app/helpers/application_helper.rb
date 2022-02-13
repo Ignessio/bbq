@@ -3,6 +3,10 @@ module ApplicationHelper
     asset_pack_path('media/images/user.png')
   end
 
+  def fa_icon(icon_class)
+    content_tag 'span', '', class: "fa fa-#{icon_class}"
+  end
+
   def flash_message
     tag.div(id: 'alert') do
       flash.each do |name, message|
