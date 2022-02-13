@@ -22,7 +22,7 @@ class EventsController < ApplicationController
     @event = current_user.events.build(event_params)
 
     if @event.save
-      redirect_to @event, notice: I18n.t('.created')
+      redirect_to @event, notice: t('.created')
     else
       render :new
     end

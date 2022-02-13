@@ -59,6 +59,17 @@ ru:
       submit: 'Сохранить'
       back: 'Назад'
 
+  comments:
+    create:
+      created: 'Ваш комментарий добавлен'
+    destroy:
+      deleted: 'Ваш комментарий удалён'
+    comment_error: 'Какая-то ошибка в комментарии'
+    form:
+      submit: 'Сохранить'
+    comment:
+      destroy_confirm: 'Точно удалить ваш комментарий?'
+
   devise:
     sessions:
       new:
@@ -84,7 +95,7 @@ ru:
         smth_wrong?: 'Что-то пошло не так?'
         delete_profile: 'Удалить профиль'
         cancel: 'Отменить'
-        sure?: 'Вы уверены?'
+        sure?: 'Вы уверены, что хотите удалить профиль?'
   error:
     one: 'В вашей форме %{count} ошибка:'
     few: 'В вашей форме %{count} ошибки:'
