@@ -44,6 +44,9 @@ ru:
       edit: 'Изменить событие'
       delete: 'Удалить событие'
       sure?: 'Точно удалить событие?'
+      who_call: 'Кто зовет:'
+      who_go: 'Кто пойдет:'
+      i_go: 'Я пойду:'
     new:
       header: 'Новое событие'
     index:
@@ -64,11 +67,22 @@ ru:
       created: 'Ваш комментарий добавлен'
     destroy:
       deleted: 'Ваш комментарий удалён'
-    comment_error: 'Какая-то ошибка в комментарии'
+    error: 'Какая-то ошибка в комментарии'
     form:
       submit: 'Сохранить'
     comment:
       destroy_confirm: 'Точно удалить ваш комментарий?'
+
+  subscriptions:
+    create:
+      created: 'Вы подписались на событие'
+    destroy:
+      deleted: 'Вы отписались'
+    error: 'Ошибка подписки'
+    form:
+      submit: 'Сохранить'
+    subscription:
+      destroy_confirm: 'Удалить вашу подписку?'
 
   devise:
     sessions:

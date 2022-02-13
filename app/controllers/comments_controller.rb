@@ -9,7 +9,7 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to @event, notice: t('.created')
     else
-      render 'event/show', alert: t('.comment_error')
+      render 'event/show', alert: t('.error')
     end
   end
 
@@ -19,7 +19,7 @@ class CommentsController < ApplicationController
     if current_user_cat_edit?(@comment)
       @comment.destroy!
     else
-      message = {alert: t('.comment_error')}
+      message = {alert: t('.error')}
     end
 
     redirect_to @event, message

@@ -3,7 +3,6 @@ class EventsController < ApplicationController
   before_action :set_event, only: [:show]
   before_action :set_current_user_event, only: %i[edit update destroy]
 
-  # GET /events
   def index
     @events = Event.all
   end

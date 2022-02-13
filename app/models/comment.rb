@@ -4,10 +4,11 @@ class Comment < ApplicationRecord
 
   validates :event, presence: true
   validates :body, presence: true
+  validates :user_name, presence: true, unless: -> { user.present? }
 
   def user_name
     if user.present?
-      user_name
+      user.name
     else
       super
     end
