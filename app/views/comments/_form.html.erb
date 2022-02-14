@@ -1,6 +1,6 @@
-<%= form_with(model: comment) do |f| %>
-  <%= render "shared/error_messages", resource: comment %>
-
+<%= form_for [@event, comment] do |f| %>
+    <%= render partial: 'partials/form_errors', locals: {model: comment} %>
+  
   <div class="mt-2">
     <%= f.label :body %>
     <%= f.text_area :body, class: 'form-control' %>
