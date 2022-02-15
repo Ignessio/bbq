@@ -1,4 +1,4 @@
-<%= form_with(model: event) do |f| %>
+<%= form_for event do |f| %>
   <%= render "shared/error_messages", resource: event %>
 
   <div class="mt-2">
@@ -20,7 +20,7 @@
     <%= f.label :description %>
     <%= f.text_area :description, class: 'form-control' %>
   </div>
-  
+
   <div class="mt-2">
     <%= f.submit t('.submit'), class: 'btn btn-outline-primary' %>
     <%= link_to t('.back'), :back , class: 'btn btn-outline-success' %>

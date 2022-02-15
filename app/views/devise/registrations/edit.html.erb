@@ -6,7 +6,7 @@
     <div class="col-md-6 mt-4">
     <form>
       <div class="mb-3">
-        <%= f.label :email, class: "form-label" %>
+        <%= f.label :email %>
         <%= f.email_field :email, class: "form-control" %>
       </div>
 
@@ -15,7 +15,7 @@
       <% end %>
 
       <div class="mb-3">
-        <%= f.label :password, class: "form-label" %> <i>(<%= t('.no_change') %>)</i>
+        <%= f.label :password %> <i>(<%= t('.no_change') %>)</i>
         <%= f.password_field :password, class: "form-control" %>
         <% if @minimum_password_length %>
           <em> (<%= @minimum_password_length %> <%= t('.min_length') %> ) </em>
@@ -23,7 +23,7 @@
       </div>
 
       <div class="mb-3">
-        <%= f.label :password_confirmation, class: "form-label" %>
+        <%= f.label :password_confirmation %>
         <%= f.password_field :password_confirmation, class: "form-control" %>
       </div>
 

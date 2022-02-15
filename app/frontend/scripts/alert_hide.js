@@ -8,7 +8,7 @@ const hideAlert = () => {
       flashAlert.style.transition = '0.8s'
       flashAlert.style.opacity = 0
     }
-  }, 5000)
+  }, 8000)
 }
 
 document.addEventListener('DOMContentLoaded', hideAlert)

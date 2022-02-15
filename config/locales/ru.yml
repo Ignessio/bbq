@@ -11,6 +11,8 @@ ru:
     models:
       user: 'Пользователь'
       event: 'Событие'
+      comment: 'Комментарий'
+      subscription: 'Подписка'
     attributes:
       user:
         name: 'Имя пользователя'
@@ -22,6 +24,12 @@ ru:
         address: 'Место события'
         datetime: 'Дата и время'
         description: 'Описание'
+      comment:
+        body: 'Комментарий'
+        user_name: 'Имя пользователя'
+      subscription:
+        user_name: 'Имя пользователя'
+        user_email: 'Email'
 
   users:
     show:
@@ -69,8 +77,6 @@ ru:
       deleted: 'Ваш комментарий удалён'
     error: 'Комментарий с ошибкой'
     form:
-      body: 'Комментарий'
-      user_name: 'Имя пользователя'
       submit: 'Сохранить комментарий'
     comment:
       delete_confirm: 'Удалить ваш комментарий?'
@@ -82,8 +88,6 @@ ru:
       deleted: 'Вы отписались'
     error: 'Ошибка подписки'
     form:
-      user_name: 'Имя пользователя'
-      user_email: 'Email'
       submit: 'Подписаться на событие'
     subscription:
       delete_confirm: 'Удалить подписку?'
