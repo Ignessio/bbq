@@ -4,7 +4,7 @@
       <%= content_tag 'div', '', class: 'event-background',
         style: "background-image: url(#{asset_pack_path('media/images/event.jpg')})" %>
 
-      <div class="event-info-inner row">
+      <div class="event-info-inner row rounded">
         <div class="col-md-6">
           <div class="event-description">
             <h1><%= @event.title %></h1>
@@ -22,7 +22,7 @@
             </div>
             <div class="my-2 col-6 text-end">
               <%= link_to t('.delete'), event_path(@event), class: 'btn btn-danger',
-                method: :delete, data: {confirm: t('.sure?')} %>
+                method: :delete, data: {confirm: t('.delete_confirm')} %>
             </div>
           </div>
         <% end %>
@@ -45,11 +45,11 @@
 
     <div class="col-md-4">
       <div class="event-owner">
-        <h4><%= t('.who_call') %></h4>
+        <h4><%= t('.host') %></h4>
           <p><%= render partial: 'users/user', object: @event.user %></p>
       </div>
       <div class="event-subscriptions">
-        <h4><%= t('.who_go') %></h4>
+        <h4><%= t('.guest') %></h4>
         <div>
           <p>
           <%= render partial: 'subscriptions/subscription',
@@ -58,7 +58,7 @@
         </div>
       </div>
       <div class="event-subscription-form">
-        <h4><%= t('.i_go') %></h4>
+        <h4><%= t('.go') %></h4>
         <div>
           <%= render partial: 'subscriptions/form', locals: {
             subscription: @new_subscription || @event.subscriptions.build

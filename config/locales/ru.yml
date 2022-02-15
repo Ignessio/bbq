@@ -43,10 +43,10 @@ ru:
     show:
       edit: 'Изменить событие'
       delete: 'Удалить событие'
-      sure?: 'Точно удалить событие?'
-      who_call: 'Кто зовет:'
-      who_go: 'Кто пойдет:'
-      i_go: 'Я пойду:'
+      delete_confirm: 'Удалить это событие?'
+      host: 'Приглашает:'
+      guest: 'Участвуют:'
+      go: 'Я пойду:'
     new:
       header: 'Новое событие'
     index:
@@ -73,7 +73,7 @@ ru:
       user_name: 'Имя пользователя'
       submit: 'Сохранить комментарий'
     comment:
-      destroy_confirm: 'Точно удалить ваш комментарий?'
+      delete_confirm: 'Удалить ваш комментарий?'
 
   subscriptions:
     create:
@@ -84,9 +84,9 @@ ru:
     form:
       user_name: 'Имя пользователя'
       user_email: 'Email'
-      submit: 'Подписаться'
+      submit: 'Подписаться на событие'
     subscription:
-      destroy_confirm: 'Удалить вашу подписку?'
+      delete_confirm: 'Удалить подписку?'
 
   devise:
     sessions:
@@ -113,7 +113,7 @@ ru:
         smth_wrong?: 'Что-то пошло не так?'
         delete_profile: 'Удалить профиль'
         cancel: 'Отменить'
-        sure?: 'Вы уверены, что хотите удалить профиль?'
+        delete_confirm: 'Вы уверены, что хотите удалить профиль?'
   error:
     one: 'В вашей форме %{count} ошибка:'
     few: 'В вашей форме %{count} ошибки:'
