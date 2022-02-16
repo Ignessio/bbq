@@ -4,7 +4,7 @@ class Subscription < ApplicationRecord
   belongs_to :event
   belongs_to :user, optional: true
 
-  before_validation :event_owner
+  validate :event_host, if: -> { user.present? }
 
   validates :user, uniqueness: { scope: :event_id }, if: -> { user.present? }
 
@@ -16,8 +16,8 @@ class Subscription < ApplicationRecord
           format: { with: EMAIL_FORMAT },
           unless: -> { user.present? }
 
-  def event_owner
-    errors if event.user == user
+  def event_host
+    errors.add(:user) if event.user == user
   end
 
   def user_name
