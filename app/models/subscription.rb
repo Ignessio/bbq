@@ -6,6 +6,8 @@ class Subscription < ApplicationRecord
 
   validate :event_host, if: -> { user.present? }
 
+  validate :email_used, unless: -> { user.present? }
+
   validates :user, uniqueness: { scope: :event_id }, if: -> { user.present? }
 
   validates :user_name, presence: true, unless: -> { user.present? }
@@ -17,7 +19,11 @@ class Subscription < ApplicationRecord
           unless: -> { user.present? }
 
   def event_host
-    errors.add(:user) if event.user == user
+    errors.add(:user, :not_allowed) if event.user == user
+  end
+
+  def email_used
+    errors.add(:user_email, :email_used) if User.find_by(email: user_email)
   end
 
   def user_name

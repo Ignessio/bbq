@@ -11,8 +11,6 @@ ru:
     models:
       user: 'Пользователь'
       event: 'Событие'
-      comment: 'Комментарий'
-      subscription: 'Подписка'
     attributes:
       user:
         name: 'Имя пользователя'
@@ -30,6 +28,14 @@ ru:
       subscription:
         user_name: 'Имя пользователя'
         user_email: 'Email'
+    errors:
+      models:
+        subscription:
+          attributes:
+            user:
+              not_allowed: 'нельзя подписаться на своё событие'
+            user_email:
+              email_used: 'уже зарегистрирован'
 
   users:
     show:
