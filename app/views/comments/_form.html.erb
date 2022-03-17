@@ -1,7 +1,7 @@
 <%= form_for [@event, comment] do |f| %>
   <%= render "shared/error_messages", resource: comment %>
 
-  <div class="mt-2">
+  <div class="mt-2 fw-bold">
     <%= f.label :body %>
     <%= f.text_area :body, class: 'form-control' %>
   </div>
@@ -13,7 +13,7 @@
     </div>
   <% end %>
 
-  <div class="mt-2">
+  <div class="my-2">
     <%= f.submit t('.submit'), class: 'btn btn-outline-primary' %>
   </div>
 <% end %>

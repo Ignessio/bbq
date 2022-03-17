@@ -11,6 +11,7 @@ ru:
     models:
       user: 'Пользователь'
       event: 'Событие'
+      photo: 'Фотография'
     attributes:
       user:
         name: 'Имя пользователя'
@@ -29,6 +30,8 @@ ru:
       subscription:
         user_name: 'Имя пользователя'
         user_email: 'Email'
+      photo:
+        photo: 'Фотографии'
     errors:
       models:
         subscription:
@@ -98,6 +101,16 @@ ru:
       submit: 'Подписаться на событие'
     subscription:
       delete_confirm: 'Удалить подписку?'
+
+  photos:
+    create:
+      created: 'Вы добавили фотографию к событию'
+    destroy:
+      deleted: 'Вы удалили фотку'
+    error: 'Ошибка с фотографией'
+    form:
+      title: 'Добавить фотографию:'
+      submit: 'Загрузить'
 
   devise:
     sessions:

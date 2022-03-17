@@ -1,0 +1,19 @@
+<%= form_for [@event, photo], html: { multipart: true } do |f| %>
+  <%= render "shared/error_messages", resource: photo %>
+
+  <div class="mt-2 fw-bold">
+    <%= f.label :photo %>
+  </div>
+
+  <div class="mt-2">
+    <%= t('.title') %>
+  </div>
+
+  <div class="mt-2">
+    <%= f.file_field :photo %>
+  </div>
+
+  <div class="my-2">
+    <%= f.submit t('.submit'), class: 'btn btn-outline-primary' %>
+  </div>
+<% end %>
