@@ -4,29 +4,13 @@ module ApplicationHelper
     user.avatar_url.presence || asset_pack_path('media/images/user.png')
   end
 
-  # def user_avatar(user)
-  #   if user.avatar?
-  #     user.avatar.url
-  #   else
-  #     asset_pack_path('media/images/avatar.jpg')
-  #   end
-  # end
-
   def user_avatar_thumb(user)
-    user.avatar.thumb_url.presence || asset_pack_path('media/images/user.png')
+    user.avatar.thumb.url.presence || asset_pack_path('media/images/user.png')
   end
-
-  # def user_avatar_thumb(user)
-  #   if user.avatar.file.present?
-  #     user.avatar.thumb.url
-  #   else
-  #     asset_pack_path('media/images/avatar.jpg')
-  #   end
-  # end
 
   # def event_photo(event)
   #   photos = event.photos.persisted
-  #   photos.sample.photo_url.if_any || asset_pack_path('media/images/event.jpg')
+  #   photos.sample.photo.url.if_any || asset_pack_path('media/images/event.jpg')
   # end
 
   def event_photo(event)
@@ -41,7 +25,7 @@ module ApplicationHelper
 
   # def event_thumb(event)
   #   photos = event.photos.persisted
-  #   photos.sample.photo.thumb_url.if_any || asset_pack_path('media/images/event_thumb.jpg')
+  #   photos.sample.photo.thumb.url.if_any || asset_pack_path('media/images/event_thumb.jpg')
   # end
 
   def event_thumb(event)
