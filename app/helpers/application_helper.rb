@@ -8,11 +8,6 @@ module ApplicationHelper
     user.avatar.thumb.url.presence || asset_pack_path('media/images/user.png')
   end
 
-  # def event_photo(event)
-  #   photos = event.photos.persisted
-  #   photos.sample.photo.url.if_any || asset_pack_path('media/images/event.jpg')
-  # end
-
   def event_photo(event)
     photos = event.photos.persisted
 
@@ -22,11 +17,6 @@ module ApplicationHelper
       asset_pack_path('media/images/event.jpg')
     end
   end
-
-  # def event_thumb(event)
-  #   photos = event.photos.persisted
-  #   photos.sample.photo.thumb.url.if_any || asset_pack_path('media/images/event_thumb.jpg')
-  # end
 
   def event_thumb(event)
     photos = event.photos.persisted

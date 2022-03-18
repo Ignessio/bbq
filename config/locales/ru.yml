@@ -111,6 +111,8 @@ ru:
     form:
       title: 'Добавить фотографию:'
       submit: 'Загрузить'
+    photo:
+      uploaded_by: 'Добавил(-ла):'
 
   devise:
     sessions:
