@@ -12,6 +12,7 @@ gem 'devise-i18n'
 gem 'rails-i18n'
 gem 'carrierwave', '~> 2.2'
 gem 'rmagick', '~> 4.2'
+gem "activestorage", "~> 6.1"
 gem 'image_processing', '~> 1.12'
 gem 'aws-sdk-s3', '~> 1.113', require: false
 
@@ -23,4 +24,5 @@ group :development do
   gem 'web-console', '>= 4.1.0'
   gem 'rack-mini-profiler', '~> 2.0'
 end
+
 
