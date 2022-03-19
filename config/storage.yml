@@ -10,7 +10,7 @@ yandex:
   service: S3
   access_key_id: 'YCAJExHY1KMFP_i5leHA8u3Os'
   secret_access_key: 'YCMLTHmMxMhbWBBt8Kh1uJUXy9uycmKNJVdFlxCx'
-  bucket: bbq-bucket-<%= Rails.env %>
+  bucket: bbq-bucket
   region: ru-central1-a
   endpoint: 'https://storage.yandexcloud.net'
   force_path_style: true
