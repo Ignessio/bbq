@@ -8,9 +8,9 @@ test:
 
 yandex:
   service: S3
-  access_key_id: 'YCAJElnJq1LAPZM3iFesBdVw3'
-  secret_access_key: 'YCPWvQ2HdbPL6y31DmfQA-U6aUPZQZqOPt_eq45e'
-  region: ru-central1-a
-  bucket: bbq-bucket-<%= Rails.env %>
-  endpoint: 'https://storage.yandexcloud.net'
+  access_key_id: "YCAJElnJq1LAPZM3iFesBdVw3"
+  secret_access_key: "YCPWvQ2HdbPL6y31DmfQA-U6aUPZQZqOPt_eq45e"
+  region: "ru-central1-a"
+  bucket: "bbq-bucket"-<%= Rails.env %>
+  endpoint: "https://storage.yandexcloud.net"
   force_path_style: true
