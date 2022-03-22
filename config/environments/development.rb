@@ -80,7 +80,7 @@ Rails.application.configure do
     port: 465,
     domain: 'yandex.ru',
     authentication: 'plain',
-    user_name: 'student.heliodor',
-    password: 'nopassword'
+    user_name: Rails.application.credentials.dig(:action_mailer, :user_name),
+    password: Rails.application.credentials.dig(:action_mailer, :password)
   }
 end
