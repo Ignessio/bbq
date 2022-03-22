@@ -59,7 +59,25 @@ Rails.application.configure do
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
 
+  # Use service for current environment in storage.yml
+  config.active_storage.service = :local
+
+  # Default url of the site.
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
-  config.active_storage.service = :local
+  # Don't care if the mailer can't send.
+  config.action_mailer.raise_delivery_errors = true
+
+  # Send mail using SMTP.
+  config.action_mailer.delivery_method = :smtp
+
+  # Settings using mail.ru smtp services.
+  config.action_mailer.smtp_settings = {
+    address: 'smtp.mail.ru',
+    port: '465',
+    user_name: 'student.heliodor',
+    password: 'Uqia5hZi0T5iWKM3anx4',
+    authentication: 'plain',
+    enable_starttls_auto: true,
+  }
 end
