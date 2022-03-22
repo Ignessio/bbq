@@ -71,13 +71,16 @@ Rails.application.configure do
   # Send mail using SMTP.
   config.action_mailer.delivery_method = :smtp
 
+  config.action_mailer.perform_deliveries = true
+
   # Settings using mail.ru smtp services.
   config.action_mailer.smtp_settings = {
-    address: 'smtp.mail.ru',
-    port: '465',
-    user_name: 'student.heliodor',
-    password: 'Uqia5hZi0T5iWKM3anx4',
+    tls: true,
+    address: 'smtp.yandex.ru',
+    port: 465,
+    domain: 'yandex.ru',
     authentication: 'plain',
-    enable_starttls_auto: true,
+    user_name: 'student.heliodor',
+    password: 'nopassword'
   }
 end
