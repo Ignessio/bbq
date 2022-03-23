@@ -73,14 +73,24 @@ Rails.application.configure do
 
   config.action_mailer.perform_deliveries = true
 
-  # Settings using mail.ru smtp services.
+  # Settings using yandex smtp services.
   config.action_mailer.smtp_settings = {
     tls: true,
     address: 'smtp.yandex.ru',
     port: 465,
     domain: 'yandex.ru',
     authentication: 'plain',
-    user_name: Rails.application.credentials.dig(:action_mailer, :user_name),
-    password: Rails.application.credentials.dig(:action_mailer, :password)
+    user_name: Rails.application.credentials.dig(:yandex_mail, :user_name),
+    password: Rails.application.credentials.dig(:yandex_mail, :password)
   }
+
+  # Settings using yandex smtp services.
+  # config.action_mailer.smtp_settings = {
+  #   enable_starttls_auto: true,
+  #   address: 'smtp.gmail.com',
+  #   port: 587,
+  #   authentication: 'plain',
+  #   user_name: Rails.application.credentials.dig(:google_mail, :user_name),
+  #   password: Rails.application.credentials.dig(:google_mail, :password)
+  # }
 end
