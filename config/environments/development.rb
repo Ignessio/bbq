@@ -69,28 +69,28 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true
 
   # Send mail using SMTP.
-  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.delivery_method = :letter_opener
 
   config.action_mailer.perform_deliveries = true
 
   # Settings using yandex smtp services.
-  config.action_mailer.smtp_settings = {
-    tls: true,
-    address: 'smtp.yandex.ru',
-    port: 465,
-    domain: 'yandex.ru',
-    authentication: 'plain',
-    user_name: Rails.application.credentials.dig(:yandex_mail, :user_name),
-    password: Rails.application.credentials.dig(:yandex_mail, :password)
-  }
+  # config.action_mailer.smtp_settings = {
+  #   tls: true,
+  #   address: 'smtp.yandex.ru',
+  #   port: 465,
+  #   domain: 'yandex.ru',
+  #   authentication: 'plain',
+  #   user_name: Rails.application.credentials.dig(:yandex_smtp, :user_name),
+  #   password: Rails.application.credentials.dig(:yandex_smtp, :password)
+  # }
 
   # Settings using yandex smtp services.
-  # config.action_mailer.smtp_settings = {
-  #   enable_starttls_auto: true,
-  #   address: 'smtp.gmail.com',
-  #   port: 587,
-  #   authentication: 'plain',
-  #   user_name: Rails.application.credentials.dig(:google_mail, :user_name),
-  #   password: Rails.application.credentials.dig(:google_mail, :password)
-  # }
+  config.action_mailer.smtp_settings = {
+    enable_starttls_auto: true,
+    address: 'smtp.gmail.com',
+    port: 587,
+    authentication: 'plain',
+    user_name: Rails.application.credentials.dig(:google_smtp, :user_name),
+    password: Rails.application.credentials.dig(:google_smtp, :password)
+  }
 end

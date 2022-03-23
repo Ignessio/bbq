@@ -127,6 +127,10 @@ GEM
       mini_magick (>= 4.9.5, < 5)
       ruby-vips (>= 2.0.17, < 3)
     jmespath (1.6.1)
+    launchy (2.5.0)
+      addressable (~> 2.7)
+    letter_opener (1.8.1)
+      launchy (>= 2.2, < 3)
     loofah (2.13.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -238,6 +242,7 @@ DEPENDENCIES
   devise-i18n
   fog-aws (~> 3.13)
   image_processing (~> 1.12)
+  letter_opener (~> 1.8)
   pg (~> 1.1)
   pry-rails
   puma (~> 5.0)

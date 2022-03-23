@@ -16,6 +16,7 @@ gem 'activestorage', '~> 6.1'
 gem 'image_processing', '~> 1.12'
 gem 'aws-sdk-s3', '~> 1.113', require: false
 gem 'fog-aws', '~> 3.13'
+gem 'letter_opener', '~> 1.8'
 
 group :development, :test do
   gem 'pry-rails'
@@ -25,6 +26,7 @@ group :development do
   gem 'web-console', '>= 4.1.0'
   gem 'rack-mini-profiler', '~> 2.0'
 end
+
 
 
 
