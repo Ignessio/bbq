@@ -14,7 +14,7 @@
       <% if @user.events.any? %>
         <h3><%= t('.arranged') %></h3>
         <div class="row text-start">
-          <%= render partial: 'events/event', collection: @user.events %>
+          <%= render @user.events %>
         </div>
       <% else %>
         <p class="mt-2"><%= t('.arranged_nothing') %></p>

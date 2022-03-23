@@ -33,11 +33,13 @@
   <div class="event-photo row border border-light rounded">
     <div class="col-md-8">
       <div class="event-photos-gallery">
-        <%= render partial: 'photos/photo', collection: @event.photos.except(@new_photo) %>
+        <%= render @event.photos.except(@new_photo) %>
       </div>
 
       <div class="event-photo-form mt-2">
-        <%= render partial: 'photos/form', locals: {photo: @new_photo || @event.photos.build} %>
+        <%= render partial: 'photos/form', locals: {
+          photo: @new_photo || @event.photos.build
+        } %>
       </div>
     </div>
   </div>
@@ -49,8 +51,7 @@
           comment: @new_comment || @event.comments.build
         } %>
         <div class="my-2">
-          <%= render partial: 'comments/comment',
-            collection: @event.comments.except(@new_comment) %>
+          <%= render @event.comments.except(@new_comment) %>
         </div>
       </div>
     </div>
@@ -65,8 +66,7 @@
           <h4><%= t('.guest') %></h4>
           <div>
             <p>
-            <%= render partial: 'subscriptions/subscription',
-              collection: @event.subscriptions.except(@new_subscription) %>
+            <%= render @event.subscriptions.except(@new_subscription) %>
             </p>
           </div>
         </div>
