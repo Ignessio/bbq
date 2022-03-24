@@ -1,5 +1,4 @@
 require "active_support/core_ext/integer/time"
-require "letter_opener"
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
@@ -64,15 +63,24 @@ Rails.application.configure do
   config.active_storage.service = :local
 
   # Default url of the site.
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = true
 
-  # Send mail using SMTP.
   config.action_mailer.delivery_method = :letter_opener
 
   config.action_mailer.perform_deliveries = true
+
+  # Settings using google smtp services.
+  # config.action_mailer.smtp_settings = {
+  #   enable_starttls_auto: true,
+  #   address: 'smtp.gmail.com',
+  #   port: 587,
+  #   authentication: 'plain',
+  #   user_name: Rails.application.credentials.dig(:google_smtp, :user_name),
+  #   password: Rails.application.credentials.dig(:google_smtp, :password)
+  # }
 
   # Settings using yandex smtp services.
   # config.action_mailer.smtp_settings = {
@@ -83,15 +91,5 @@ Rails.application.configure do
   #   authentication: 'plain',
   #   user_name: Rails.application.credentials.dig(:yandex_smtp, :user_name),
   #   password: Rails.application.credentials.dig(:yandex_smtp, :password)
-  # }
-
-  # Settings using yandex smtp services.
-  # config.action_mailer.smtp_settings = {
-  #   enable_starttls_auto: true,
-  #   address: 'smtp.gmail.com',
-  #   port: 587,
-  #   authentication: 'plain',
-  #   user_name: Rails.application.credentials.dig(:google_smtp, :user_name),
-  #   password: Rails.application.credentials.dig(:google_smtp, :password)
   # }
 end
