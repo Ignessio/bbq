@@ -1,4 +1,5 @@
 require "active_support/core_ext/integer/time"
+require "letter_opener"
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
@@ -85,12 +86,12 @@ Rails.application.configure do
   # }
 
   # Settings using yandex smtp services.
-  config.action_mailer.smtp_settings = {
-    enable_starttls_auto: true,
-    address: 'smtp.gmail.com',
-    port: 587,
-    authentication: 'plain',
-    user_name: Rails.application.credentials.dig(:google_smtp, :user_name),
-    password: Rails.application.credentials.dig(:google_smtp, :password)
-  }
+  # config.action_mailer.smtp_settings = {
+  #   enable_starttls_auto: true,
+  #   address: 'smtp.gmail.com',
+  #   port: 587,
+  #   authentication: 'plain',
+  #   user_name: Rails.application.credentials.dig(:google_smtp, :user_name),
+  #   password: Rails.application.credentials.dig(:google_smtp, :password)
+  # }
 end

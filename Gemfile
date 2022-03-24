@@ -16,10 +16,10 @@ gem 'activestorage', '~> 6.1'
 gem 'image_processing', '~> 1.12'
 gem 'aws-sdk-s3', '~> 1.113', require: false
 gem 'fog-aws', '~> 3.13'
-gem 'letter_opener', '~> 1.8'
 
 group :development, :test do
   gem 'pry-rails'
+  gem 'letter_opener', '~> 1.8'
 end
 
 group :development do
