@@ -7,6 +7,8 @@ class SubscriptionsController < ApplicationController
     @new_subscription.user = current_user
 
     if @new_subscription.save
+      EventMailer.subscription(@event, @new_subscription).deliver_now
+      
       redirect_to @event, notice: t('.created')
     else
       render 'events/show', alert: t('.error')
@@ -27,7 +29,7 @@ class SubscriptionsController < ApplicationController
   def set_event
     @event = Event.find(params[:event_id])
   end
-  
+
   def set_subscription
     @subscription = @event.subscriptions.find(params[:id])
   end
