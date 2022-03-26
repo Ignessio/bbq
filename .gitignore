@@ -22,9 +22,8 @@
 /public/assets
 .byebug_history
 
-# Ignore master key for decrypting credentials and more.
+# Ignore secret files.
 /config/master.key
-# /config/credentials.yml.enc
 
 /public/packs
 /public/packs-test
@@ -38,5 +37,3 @@ yarn-debug.log*
 # Ignore all test and make files
 Makefile
 /test/*
-
-/config/master.key
