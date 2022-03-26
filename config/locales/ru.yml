@@ -44,8 +44,8 @@ ru:
   users:
     show:
       edit: 'Редактировать профиль'
-      arranged: 'Организовано:'
-      arranged_nothing: 'Пока нет мероприятий'
+      arranged: 'Назначенные события:'
+      arranged_nothing: 'Нет событий'
     edit:
       header: 'Редактирование профиля'
       change_password: 'Сменить пароль'
@@ -106,7 +106,7 @@ ru:
     create:
       created: 'Вы добавили фотографию к событию'
     destroy:
-      deleted: 'Вы удалили фотку'
+      deleted: 'Вы удалили фотографию'
     error: 'Ошибка с фотографией'
     form:
       title: 'Добавить фотографию:'
@@ -122,7 +122,11 @@ ru:
     passwords:
       new:
         header: 'Забыли пароль?'
-        submit: 'Восстановить доступ'
+        submit: 'Восстановить пароль'
+      edit:
+        header: 'Изменение пароля'
+        min_length: 'знаков минимум'
+        submit: 'Сохранить'
     registrations:
       new:
         header: 'Регистрация нового пользователя'
@@ -139,7 +143,7 @@ ru:
         smth_wrong?: 'Что-то пошло не так?'
         delete_profile: 'Удалить профиль'
         cancel: 'Отменить'
-        delete_confirm: 'Вы уверены, что хотите удалить профиль?'
+        delete_confirm: 'Удалить совсем ваш профиль?'
 
   error:
     one: 'В вашей форме %{count} ошибка:'
