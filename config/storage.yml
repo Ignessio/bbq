@@ -14,12 +14,3 @@ yandex:
   region: ru-central1-a
   endpoint: 'https://storage.yandexcloud.net'
   force_path_style: true
-
-# yandex:
-#   service: S3
-#   access_key_id: ENV['S3_ACCESS_KEY']
-#   secret_access_key: ENV['S3_SECRET_KEY']
-#   bucket: ENV['S3_BUCKET_NAME']
-#   region: ru-central1-a
-#   endpoint: 'https://storage.yandexcloud.net'
-#   force_path_style: true
