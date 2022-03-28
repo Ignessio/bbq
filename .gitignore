@@ -19,6 +19,7 @@
 !/tmp/pids/.keep
 
 # Ignore master key for credentials.
+/config/credentials.yml.enc
 /config/master.key
 
 # Ignore public and test directories.
