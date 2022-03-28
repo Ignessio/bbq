@@ -5,10 +5,9 @@ class User < ApplicationRecord
   has_many :events, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :subscriptions, dependent: :destroy
+  has_one_attached :attachable
 
   after_commit :link_subscriptions, on: :create
-
-  mount_uploader :avatar, AvatarUploader
 
   validates :name, presence: true, length: { maximum: 35 }
 
