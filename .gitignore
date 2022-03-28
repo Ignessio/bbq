@@ -18,22 +18,24 @@
 !/tmp/pids/
 !/tmp/pids/.keep
 
-
-/public/assets
-.byebug_history
-
-# Ignore secret files.
+# Ignore credentials.
 /config/master.key
+/config/credentials.yml.enc
 
+# Ignore public files.
+/public/assets
 /public/packs
 /public/packs-test
 /public/uploads
 /public/images
 /node_modules
+
+# Ignore log files
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+.byebug_history
 
-# Ignore all test and make files
+# Ignore all test files
 Makefile
 /test/*
