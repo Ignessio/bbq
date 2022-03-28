@@ -10,7 +10,7 @@ yandex:
   service: S3
   access_key_id: Rails.application.credentials.dig(:yandex_cloud, :access_key)
   secret_access_key: Rails.application.credentials.dig(:yandex_cloud, :secret_key)
-  bucket: Rails.application.credentials.dig(:yandexcloud, :bucket_name)
+  bucket: Rails.application.credentials.dig(:yandex_cloud, :bucket_name)
   region: ru-central1-a
   endpoint: 'https://storage.yandexcloud.net'
   force_path_style: true

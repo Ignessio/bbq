@@ -18,22 +18,24 @@
 !/tmp/pids/
 !/tmp/pids/.keep
 
-# Ignore master key for credentials.
-/config/credentials.yml.enc
+# Ignore credentials.
 /config/master.key
+/config/credentials.yml.enc
 
-# Ignore public and test directories.
+# Ignore public files.
 /public/assets
 /public/packs
 /public/packs-test
 /public/uploads
 /public/images
 /node_modules
+
+# Ignore log files
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
 .byebug_history
 
-# Ignore all test and make files.
+# Ignore all test files
 Makefile
 /test/*
