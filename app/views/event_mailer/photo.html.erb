@@ -1,5 +1,7 @@
 <h1><%= t '.title' %></h1>
-<p><%= link_to image_tag(@photo.photo.thumb.url), @photo.photo.url %></p>
+<p><%= link_to image_tag(@photo.photo.variant(resize_to_limit: [100, 100])), @photo.photo %></p>
+
+<%# <p><%= link_to image_tag(@photo.photo.thumb.url), @photo.photo.url %></p> %>
 
 <p><%= t '.author' %>: <strong><%= @photo.user.name %></strong></p>
 
@@ -13,3 +15,4 @@
 
 <%= t '.owner' %>
 <h4><%= @event.user.name %></h4>
+.variant(resize_to_limit: [50, 50])

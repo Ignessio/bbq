@@ -1,5 +1,7 @@
 <div class="event-photo my-2">
-  <%= link_to image_tag(photo.photo.thumb.url), photo.photo.url %>
+  <%= link_to image_tag(photo.photo.variant(resize_to_limit: [50, 50])), photo.photo %>
+
+  <%# <%= link_to image_tag(photo.photo.thumb.url), photo.photo.url %> %>
 
   <%= t('.uploaded_by') %>
   <%= render partial: 'users/user', object: photo.user %>
