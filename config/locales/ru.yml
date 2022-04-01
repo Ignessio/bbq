@@ -1,7 +1,7 @@
 ru:
   app:
     name: 'Шашлыки'
-    company: 'Валентин'
+    company: 'Student Ruby on Rails enterprise'
     profile: 'Профиль'
     log_out: 'Выйти'
     log_in: 'Войти'
@@ -24,6 +24,7 @@ ru:
         address: 'Место события'
         datetime: 'Дата и время'
         description: 'Описание'
+        pincode: 'Пин-код'
       comment:
         body: 'Комментарий'
         user_name: 'Имя пользователя'
@@ -65,6 +66,7 @@ ru:
       host: 'Приглашает:'
       guest: 'Участвуют:'
       go: 'Я пойду'
+      wrong_pincode: 'Неверный пин-код'
     new:
       header: 'Новое событие'
     index:
@@ -79,6 +81,11 @@ ru:
     form:
       submit: 'Сохранить'
       back: 'Назад'
+    password_form:
+      header: 'Доступ только по пин-коду'
+      title: 'Пин-код'
+      submit: 'Подтвердить'
+      main_page: 'На главную страницу'
 
   comments:
     create:
