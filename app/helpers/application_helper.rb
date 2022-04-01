@@ -5,16 +5,8 @@ module ApplicationHelper
   end
 
   def user_avatar_thumb(user)
-    user.avatar.presence.variant(resize_to_limit: [50, 50]) || asset_pack_path('media/images/user.png')
+    user.avatar&.variant(resize_to_limit: [50, 50]) || asset_pack_path('media/images/user.png')
   end
-
-  # def user_avatar_thumb(user)
-  #   if user.avatar.presence
-  #     user.avatar.variant(resize_to_limit: [50, 50])
-  #   else
-  #     asset_pack_path('media/images/user.png')
-  #   end
-  # end
 
   def event_photo(event)
     photos = event.photos.persisted
