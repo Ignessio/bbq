@@ -22,6 +22,11 @@
   </div>
 
   <div class="mt-2">
+    <%= f.label :pincode %>
+      <%= f.text_field :pincode, class: 'form-control' %>
+  </div>
+
+  <div class="actions mt-4">
     <%= f.submit t('.submit'), class: 'btn btn-outline-primary' %>
     <%= link_to t('.back'), :back , class: 'btn btn-outline-success' %>
   </div>
