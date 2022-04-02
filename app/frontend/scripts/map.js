@@ -1,6 +1,8 @@
 ymaps.ready(init);
 
 function init(){
+  if (document.getElementById('map') === null) return
+  
   const address = document.getElementById('map').getAttribute('data-address');
 
   const myMap = new ymaps.Map("map", {
