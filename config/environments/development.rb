@@ -1,6 +1,11 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
+
+  config.active_storage.service = :yandex
+
+  config.action_mailer.delivery_method = :letter_opener
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded any time
@@ -59,16 +64,11 @@ Rails.application.configure do
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
 
-  # Use service for current environment in storage.yml
-  config.active_storage.service = :local
-
   # Default url of the site.
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = true
-
-  config.action_mailer.delivery_method = :letter_opener
 
   config.action_mailer.perform_deliveries = true
 end

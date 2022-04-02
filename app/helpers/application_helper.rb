@@ -1,18 +1,24 @@
 module ApplicationHelper
 
   def user_avatar(user)
-    user.avatar.presence || asset_pack_path('media/images/user.png')
+    user.avatar.presence&.url || asset_pack_path('media/images/user.png')
   end
 
   def user_avatar_thumb(user)
-    user.avatar&.variant(resize_to_limit: [50, 50]) || asset_pack_path('media/images/user.png')
+    user.avatar.presence&.variant(resize_to_limit: [50, 50]) || asset_pack_path('media/images/user.png')
+
+    # if user.avatar.attached?
+    #   user.avatar.variant(resize_to_limit: [50, 50])
+    # else
+    #   asset_pack_path('media/images/user.png')
+    # end
   end
 
   def event_photo(event)
     photos = event.photos.persisted
 
     if photos.any?
-      photos.sample.photo
+      photos.sample.photo.url
     else
       asset_pack_path('media/images/event.jpg')
     end
@@ -22,7 +28,7 @@ module ApplicationHelper
     photos = event.photos.persisted
 
     if photos.any?
-      photos.sample.photo.variant(resize_to_limit: [100, 100])
+      photos.sample.photo.url
     else
       asset_pack_path('media/images/event_thumb.jpg')
     end

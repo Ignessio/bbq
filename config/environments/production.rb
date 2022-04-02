@@ -1,6 +1,7 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
+  config.active_storage.service = :yandex
   config.action_mailer.default_url_options = {host: "minibbq.herokuapp.com", protocol: "https"}
   config.action_mailer.perform_deliveries = true
   config.action_mailer.delivery_method = :smtp
@@ -111,5 +112,4 @@ Rails.application.configure do
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
 
   # Use service for current environment in storage.yml
-  config.active_storage.service = :yandex
 end
