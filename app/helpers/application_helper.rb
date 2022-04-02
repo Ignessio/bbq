@@ -6,12 +6,6 @@ module ApplicationHelper
 
   def user_avatar_thumb(user)
     user.avatar.presence&.variant(resize_to_limit: [50, 50]) || asset_pack_path('media/images/user.png')
-
-    # if user.avatar.attached?
-    #   user.avatar.variant(resize_to_limit: [50, 50])
-    # else
-    #   asset_pack_path('media/images/user.png')
-    # end
   end
 
   def event_photo(event)
