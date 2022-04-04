@@ -13,6 +13,7 @@ gem 'rails-i18n'
 gem 'image_processing', '~> 1.12'
 gem 'activestorage', '~> 6.1'
 gem 'aws-sdk-s3', '~> 1.113', require: false
+gem "mailjet", "~> 1.6"
 
 group :development, :test do
   gem 'pry-rails'
@@ -23,3 +24,4 @@ group :development do
   gem 'web-console', '>= 4.1.0'
   gem 'rack-mini-profiler', '~> 2.0'
 end
+

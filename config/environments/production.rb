@@ -2,17 +2,20 @@ require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
   config.active_storage.service = :yandex
-  config.action_mailer.default_url_options = {host: "minibbq.herokuapp.com", protocol: "https"}
+  config.action_mailer.default_url_options = {host: Rails.application.credentials.dig(:mailjet, :sender_host), protocol: "https"}
+  config.action_mailer.perform_caching = false
   config.action_mailer.perform_deliveries = true
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    enable_starttls_auto: true,
-    address: 'smtp.gmail.com',
-    port: 587,
-    authentication: 'plain',
-    user_name: Rails.application.credentials.dig(:google_smtp, :user_name),
-    password: Rails.application.credentials.dig(:google_smtp, :password)
-  }
+  config.action_mailer.delivery_method = :mailjet
+
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.smtp_settings = {
+  #   enable_starttls_auto: true,
+  #   address: 'smtp.gmail.com',
+  #   port: 587,
+  #   authentication: 'plain',
+  #   user_name: Rails.application.credentials.dig(:google_smtp, :user_name),
+  #   password: Rails.application.credentials.dig(:google_smtp, :password)
+  # }
 
   # Settings specified here will take precedence over those in config/application.rb.
 
