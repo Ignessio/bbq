@@ -120,6 +120,8 @@ ru:
       submit: 'Загрузить'
     photo:
       uploaded_by: 'Добавил(-ла):'
+      delete_confirm: 'Удалить картинку?'
+
 
   devise:
     sessions:
