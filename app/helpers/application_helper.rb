@@ -5,7 +5,7 @@ module ApplicationHelper
   end
 
   def user_avatar_thumb(user)
-    user.avatar.presence&.variant(resize_to_limit: [50, 50]) || asset_pack_path('media/images/user.png')
+    user.avatar.presence&.variant(resize_to_limit: [50, 50]) || asset_pack_path('media/images/user_thumb.png')
   end
 
   def event_photo(event)
