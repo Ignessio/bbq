@@ -8,3 +8,4 @@ import '../scripts/map'
 const images = require.context('../images', true)
 
 import 'bootstrap/dist/js/bootstrap'
+import 'lightbox2/dist/js/lightbox-plus-jquery'
