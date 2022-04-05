@@ -31,8 +31,6 @@ ru:
       subscription:
         user_name: 'Имя пользователя'
         user_email: 'Email'
-      photo:
-        photo: 'Фотографии'
     errors:
       models:
         subscription:
@@ -63,6 +61,7 @@ ru:
       edit: 'Изменить событие'
       delete: 'Удалить событие'
       delete_confirm: 'Удалить это событие?'
+      gallery: 'Галлерея события:'
       host: 'Приглашает:'
       guest: 'Участвуют:'
       go: 'Я пойду'

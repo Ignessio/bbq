@@ -1,5 +1,4 @@
 module ApplicationHelper
-
   def user_avatar(user)
     user.avatar.presence&.url || asset_pack_path('media/images/user.png')
   end
