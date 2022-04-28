@@ -5,21 +5,23 @@
   Authentication using email or via Vkontakte and Facebook are supported. Password repair implemented as well.
   Users can update own profile and events once created.
 
+## Demo
+
+  - [minibbq](https://minibbq.herokuapp.com/)
+  - [heliodor-bbq.ru](http://heliodor-bbq.ru/)
+
 ## Language and framework
+
   * Ruby 3.0.2
   * Rails 6.1.5
 
 ## How to use
 
-  * Demo
-  ```
-  https://minibbq.herokuapp.com/
-  ```
   * Download folder from repository or use clonning
   ```
   git clone git@github.com:Ignessio/bbq
   ```
-  * Install required labraries
+  * Install required libraries
   ```
   bundle install
   ```
@@ -45,6 +47,12 @@
 
   In order to use full application functions authentication keys needs to be added in
   credentials.yml encrypted file.
+  * To enter editing mode use command including your prefered editor:
+  ```
+  EDITOR=vim rails credentials:edit
+  ```
+  *Note: VIM editor is choosen above*
+
   The following credentials required:
 
   ```
