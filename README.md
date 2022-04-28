@@ -11,8 +11,10 @@
 
 ## How to use
 
-  The usual way to start application on local machine is below.
-
+  * Demo
+  ```
+  https://minibbq.herokuapp.com/
+  ```
   * Download folder from repository or use clonning
   ```
   git clone git@github.com:Ignessio/bbq
