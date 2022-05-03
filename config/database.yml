@@ -7,6 +7,10 @@ development:
   <<: *default
   database: bbq_development
 
+test:
+  <<: *default
+  database: bbq_test
+
 production:
   <<: *default
   user: <%= Rails.application.credentials.dig(:database, :user) %>

@@ -1,27 +1,19 @@
 require 'rails_helper'
 
 RSpec.describe EventPolicy, type: :policy do
-  let(:user) { User.new }
+  let(:user) { User.create!(name: 'user', email: 'user@me.ru', password: '123456') }
 
   subject { described_class }
 
-  permissions ".scope" do
-    pending "add some examples to (or delete) #{__FILE__}"
+  describe 'user authorized' do
+    permissions :create? do
+      it { is_expected.to permit(user, Event) }
+    end
   end
 
-  permissions :show? do
-    pending "add some examples to (or delete) #{__FILE__}"
-  end
-
-  permissions :create? do
-    pending "add some examples to (or delete) #{__FILE__}"
-  end
-
-  permissions :update? do
-    pending "add some examples to (or delete) #{__FILE__}"
-  end
-
-  permissions :destroy? do
-    pending "add some examples to (or delete) #{__FILE__}"
+  describe 'user not authorized' do
+    permissions :create? do
+      it { is_expected.not_to permit(nil, Event) }
+    end
   end
 end
