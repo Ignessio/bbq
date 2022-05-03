@@ -195,3 +195,6 @@ ru:
       datetime: 'Дата события'
       owner: 'Организатор'
       subject: "Добавлена новая фотография к событию: %{event}"
+
+pundit:
+  not_authorized: 'Не разрешено!'
