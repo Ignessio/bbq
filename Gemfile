@@ -14,10 +14,12 @@ gem 'image_processing', '~> 1.12'
 gem 'activestorage', '~> 6.1'
 gem 'aws-sdk-s3', '~> 1.113', require: false
 gem "mailjet", "~> 1.6"
+gem "pundit", "~> 2.2"
 
 group :development, :test do
   gem 'pry-rails'
   gem 'letter_opener', '~> 1.8'
+  gem "rspec-rails", "~> 5.1"
 end
 
 group :development do
@@ -28,3 +30,4 @@ group :development do
   gem 'web-console', '>= 4.1.0'
   gem 'rack-mini-profiler', '~> 2.0'
 end
+
