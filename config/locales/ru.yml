@@ -196,5 +196,5 @@ ru:
       owner: 'Организатор'
       subject: "Добавлена новая фотография к событию: %{event}"
 
-pundit:
-  not_authorized: 'Не разрешено!'
+  pundit:
+    not_authorized: 'Вам не разрешено это действие!'

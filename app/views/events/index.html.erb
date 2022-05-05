@@ -1,7 +1,9 @@
 <h1><%= t('.events') %></h1>
 
 <div class="my-4">
-  <%= link_to t('.create'), new_event_path, class: 'btn btn-outline-success' %>
+  <% if policy(Event).create? %>
+    <%= link_to t('.create'), new_event_path, class: 'btn btn-outline-success' %>
+  <% end %>
 </div>
 
 <div class="row mb-2">
