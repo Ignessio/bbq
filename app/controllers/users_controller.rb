@@ -18,6 +18,7 @@ class UsersController < ApplicationController
   end
 
   private
+  
   def set_current_user
     @user = current_user
   end
