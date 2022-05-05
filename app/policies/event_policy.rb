@@ -6,15 +6,19 @@ class EventPolicy < ApplicationPolicy
   def destroy?
     update?
   end
-  
+
   def show?
     update?
   end
-  
+
+  def edit?
+    update?
+  end
+
   def update?
     user_is_owner?(record)
   end
-  
+
   class Scope < Scope
     def resolve
       scope.where(user: user) if user.present?
@@ -25,5 +29,5 @@ class EventPolicy < ApplicationPolicy
 
   def user_is_owner?(event)
     user.present? && event&.user == user
-  end  
+  end
 end
