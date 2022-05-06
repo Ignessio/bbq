@@ -7,7 +7,7 @@ RSpec.describe EventPolicy, type: :policy do
 
   subject { described_class }
 
-  describe 'user authorized' do
+  describe 'user permitted' do
     permissions :create? do
       it { is_expected.to permit(user, Event) }
     end
@@ -29,7 +29,7 @@ RSpec.describe EventPolicy, type: :policy do
     end
   end
 
-  describe 'user not authorized' do
+  describe 'user unpermitted' do
     permissions :create? do
       it { is_expected.not_to permit(nil, Event) }
     end
