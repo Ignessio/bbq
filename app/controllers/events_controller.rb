@@ -1,10 +1,10 @@
 class EventsController < ApplicationController
-  before_action :authenticate_user!, except: [:index]
+  before_action :authenticate_user!, except: :index
   before_action :set_event, except: %i[index new create]
-  before_action :password_guard!, only: [:show]
+  before_action :password_guard!, only: :show
   before_action :authorize_event, except: %i[index new create]
 
-  after_action :verify_authorized, except: [:index]
+  after_action :verify_authorized, except: :index
 
   def index
     @events = Event.all
