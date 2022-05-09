@@ -2,7 +2,7 @@
   <span>
   <% if policy(Comment).create? %>
     <%= link_to(fa_icon('trash'), event_comment_path(comment.event, comment),
-    method: :delete, data: {confirm: t('.delete_confirm')}) %>
+      method: :delete, data: {confirm: t('.delete_confirm')}) %>
   <% end %>
   <%= comment.body %>
   </span>

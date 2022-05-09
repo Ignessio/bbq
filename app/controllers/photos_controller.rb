@@ -1,10 +1,14 @@
 class PhotosController < ApplicationController
   before_action :set_event, only: %i[create destroy]
-  before_action :set_photo, only: [:destroy]
+  before_action :set_photo, only: :destroy
+
+  after_action :verify_authorized
 
   def create
     @new_photo = @event.photos.build(photo_params)
     @new_photo.user = current_user
+
+    authorize @new_photo
 
     if @new_photo.save
       notify_new_photo(@new_photo)
@@ -16,19 +20,17 @@ class PhotosController < ApplicationController
   end
 
   def destroy
+    authorize @photo
+
     message = {notice: t('.deleted')}
 
-    if current_user_can_edit?(@photo)
-      @photo.destroy
-    else
-      message = {alert: t('.error')}
-    end
+    @photo.destroy
 
     redirect_to @event, message
   end
 
   private
-  
+
   def set_event
     @event = Event.find(params[:event_id])
   end

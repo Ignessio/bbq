@@ -9,7 +9,7 @@ RSpec.describe CommentPolicy, type: :policy do
 
   describe 'user authorized' do
     permissions :create? do
-      it { is_expected.to permit(user, comment) }
+      it { is_expected.to permit(user, Comment) }
     end
 
     permissions :destroy? do
@@ -19,7 +19,7 @@ RSpec.describe CommentPolicy, type: :policy do
 
   describe 'user not authorized' do
     permissions :create? do
-      it { is_expected.not_to permit(nil, comment) }
+      it { is_expected.not_to permit(nil, Comment) }
     end
 
     permissions :destroy? do
