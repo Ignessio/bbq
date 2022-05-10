@@ -10,10 +10,10 @@ class CommentPolicy < ApplicationPolicy
   private
 
   def user_event_owner?(comment)
-    user.present? && comment&.event.user == user
+    user.present? && (comment.try(:event).try(:user) == user)
   end
 
-  def user_comment_owner?(commnet)
-    user.present? && comment&.user == user
+  def user_comment_owner?(comment)
+    user.present? && (comment.try(:user) == user)
   end
 end

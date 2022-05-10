@@ -8,7 +8,7 @@ class EventPolicy < ApplicationPolicy
   end
 
   def show?
-    update?
+    create?
   end
 
   def edit?
@@ -21,7 +21,7 @@ class EventPolicy < ApplicationPolicy
 
   class Scope < Scope
     def resolve
-      scope.where(user: user) if user.present?
+      scope.all
     end
   end
 

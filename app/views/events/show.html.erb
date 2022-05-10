@@ -15,7 +15,7 @@
           </div>
         </div>
 
-        <% if policy(Event).create? %>
+        <% if policy(@event).update? %>
           <div class="row">
             <div class="my-2 col-6">
               <%= link_to t('.edit'), edit_event_path(@event), class: 'btn btn-primary' %>

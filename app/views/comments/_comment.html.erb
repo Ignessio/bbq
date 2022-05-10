@@ -1,6 +1,6 @@
 <div class="event-comment mb-2">
   <span>
-  <% if policy(Comment).create? %>
+  <% if policy(@event).destroy? %>
     <%= link_to(fa_icon('trash'), event_comment_path(comment.event, comment),
       method: :delete, data: {confirm: t('.delete_confirm')}) %>
   <% end %>

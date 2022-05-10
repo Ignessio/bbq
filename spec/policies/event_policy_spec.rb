@@ -35,7 +35,7 @@ RSpec.describe EventPolicy, type: :policy do
     end
 
     permissions :show? do
-      it { is_expected.not_to permit(guest, event) }
+      it { is_expected.to permit(guest, event) }
     end
 
     permissions :edit? do
