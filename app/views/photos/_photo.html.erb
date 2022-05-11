@@ -1,6 +1,6 @@
 <% title = "#{t('.uploaded_by')} #{render partial: 'users/user', object: photo.user}" %>
 
-  <% if policy(Photo).create? %>
+  <% if policy(@event).destroy? %>
     <% title <<  link_to(fa_icon('trash'), event_photo_path(photo.event, photo),
       method: :delete, data: {confirm: t('.delete_confirm')}) %>
   <% end %>

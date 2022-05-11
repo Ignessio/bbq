@@ -9,11 +9,11 @@ class PhotoPolicy < ApplicationPolicy
 
   private
 
-  def user_event_owner?(comment)
-    user.present? && photo&.event.user == user
+  def user_event_owner?(photo)
+    user.present? && (photo.try(:event).try(:user) == user)
   end
 
-  def user_photo_owner?(commnet)
-    user.present? && photo&.user == user
+  def user_photo_owner?(photo)
+    user.present? && (photo.try(:user) == user)
   end
 end
