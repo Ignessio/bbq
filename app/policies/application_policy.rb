@@ -1,8 +1,11 @@
 class ApplicationPolicy
-  attr_reader :user, :record
+  attr_reader :user, :record, :cookies, :context
 
-  def initialize(user, record)
-    @user = user
+  delegate :user, to: :context
+  delegate :cookies, to: :context
+
+  def initialize(context, record)
+    @context = context
     @record = record
   end
 
@@ -47,11 +50,11 @@ class ApplicationPolicy
     end
 
     def resolve
-      raise NotImplementedError, "You must define #resolve in #{self.class}"
+      scope.all
     end
 
-    def resolve
-      scope
-    end
+    private
+
+    attr_reader :user, :scope
   end
 end

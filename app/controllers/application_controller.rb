@@ -18,6 +18,10 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
   end
 
+  def pundit_user
+    UserContext.new(current_user, cookies)
+  end
+
   private
 
   def user_not_authorized
