@@ -1,7 +1,9 @@
 <div class="event-comment mb-2">
   <span>
-  <%= link_to(fa_icon('trash'), event_comment_path(comment.event, comment),
-    method: :delete, data: {confirm: t('.delete_confirm')}) if current_user_can_edit?(comment) %>
+  <% if policy(@event).destroy? %>
+    <%= link_to(fa_icon('trash'), event_comment_path(comment.event, comment),
+      method: :delete, data: {confirm: t('.delete_confirm')}) %>
+  <% end %>
   <%= comment.body %>
   </span>
   <div>

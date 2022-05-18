@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe EventPolicy, type: :policy do
-  let(:user) { User.create!(name: 'user', email: 'user@me.ru', password: '123456') }
+  let(:user) { User.create!(name: 'User', email: 'user@me.ru', password: '123456') }
   let(:event) { Event.create(title: 'Event', address: 'Address', datetime: Time.now, user: user) }
-  let(:guest) { User.create!(name: 'guest', email: 'guest@me.ru', password: '123456') }
+  let(:guest) { User.create!(name: 'Guest', email: 'guest@me.ru', password: '123456') }
 
   subject { described_class }
 
@@ -35,7 +35,7 @@ RSpec.describe EventPolicy, type: :policy do
     end
 
     permissions :show? do
-      it { is_expected.not_to permit(guest, event) }
+      it { is_expected.to permit(guest, event) }
     end
 
     permissions :edit? do

@@ -1,8 +1,11 @@
 class ApplicationPolicy
-  attr_reader :user, :record
+  attr_reader :user, :record, :cookies, :context
 
-  def initialize(user, record)
-    @user = user
+  delegate :user, to: :context
+  delegate :cookies, to: :context
+
+  def initialize(context, record)
+    @context = context
     @record = record
   end
 
@@ -34,14 +37,20 @@ class ApplicationPolicy
     false
   end
 
+  def scope
+    Pundit.policy_scope!(user, record.class)
+  end
+
   class Scope
+    attr_reader :user, :scope
+
     def initialize(user, scope)
       @user = user
       @scope = scope
     end
 
     def resolve
-      raise NotImplementedError, "You must define #resolve in #{self.class}"
+      scope.all
     end
 
     private
