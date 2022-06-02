@@ -270,7 +270,7 @@ PLATFORMS
 DEPENDENCIES
   activestorage (~> 6.1)
   aws-sdk-s3 (~> 1.113)
-  capistrano (~> 3.11)
+  capistrano (~> 3.17)
   capistrano-passenger (~> 0.2)
   capistrano-rails (~> 1.4)
   capistrano-rbenv (~> 2.1, >= 2.1.4)
@@ -294,4 +294,4 @@ RUBY VERSION
    ruby 3.0.2p107
 
 BUNDLED WITH
-   2.3.6
+   2.3.13
