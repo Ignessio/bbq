@@ -3,8 +3,7 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  resources :subscriptions
-  resources :comments
+  resources :subscriptions, :comments
 
   resources :users, only: %i[show edit update]
 
