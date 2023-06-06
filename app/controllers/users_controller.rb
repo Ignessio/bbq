@@ -11,14 +11,14 @@ class UsersController < ApplicationController
 
   def update
     if @user.update(user_params)
-        redirect_to @user, notice: t('.updated')
+      redirect_to @user, notice: t('.updated')
     else
       render :edit
     end
   end
 
   private
-  
+
   def set_current_user
     @user = current_user
   end
